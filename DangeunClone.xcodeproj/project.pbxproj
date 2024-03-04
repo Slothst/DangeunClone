@@ -16,7 +16,7 @@
 		252B53362B95E56F005C6473 /* NeighborhoodLifeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252B53352B95E56F005C6473 /* NeighborhoodLifeViewController.swift */; };
 		252B53382B95E57E005C6473 /* NearByViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252B53372B95E57E005C6473 /* NearByViewController.swift */; };
 		252B533A2B95E597005C6473 /* ChattingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252B53392B95E597005C6473 /* ChattingViewController.swift */; };
-		252B533C2B95E5AC005C6473 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252B533B2B95E5AC005C6473 /* SettingsViewController.swift */; };
+		252B533C2B95E5AC005C6473 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252B533B2B95E5AC005C6473 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +31,7 @@
 		252B53352B95E56F005C6473 /* NeighborhoodLifeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeighborhoodLifeViewController.swift; sourceTree = "<group>"; };
 		252B53372B95E57E005C6473 /* NearByViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearByViewController.swift; sourceTree = "<group>"; };
 		252B53392B95E597005C6473 /* ChattingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingViewController.swift; sourceTree = "<group>"; };
-		252B533B2B95E5AC005C6473 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		252B533B2B95E5AC005C6473 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,7 +130,7 @@
 				252B53352B95E56F005C6473 /* NeighborhoodLifeViewController.swift */,
 				252B53372B95E57E005C6473 /* NearByViewController.swift */,
 				252B53392B95E597005C6473 /* ChattingViewController.swift */,
-				252B533B2B95E5AC005C6473 /* SettingsViewController.swift */,
+				252B533B2B95E5AC005C6473 /* ProfileViewController.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -212,7 +212,7 @@
 				252B531C2B95A332005C6473 /* SceneDelegate.swift in Sources */,
 				252B53342B95E529005C6473 /* HomeViewController.swift in Sources */,
 				252B53382B95E57E005C6473 /* NearByViewController.swift in Sources */,
-				252B533C2B95E5AC005C6473 /* SettingsViewController.swift in Sources */,
+				252B533C2B95E5AC005C6473 /* ProfileViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,10 +7,31 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
-
+final class HomeViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "홈"
+        addRightBarButtons()
+    }
+    
+    private func addRightBarButtons() {
+        navigationItem.rightBarButtonItems = [addNoticeButton(), addSearchButton()]
+    }
+    
+    private func addNoticeButton() -> UIBarButtonItem {
+        return UIBarButtonItem(image: UIImage(systemName: "bell"), style: .plain, target: self, action: #selector(didTapNotice))
+    }
+    
+    private func addSearchButton() -> UIBarButtonItem {
+        return UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(didTapSearch))
+    }
+    
+    @objc private func didTapNotice() {
+        
+    }
+    
+    @objc private func didTapSearch() {
+        
     }
 }

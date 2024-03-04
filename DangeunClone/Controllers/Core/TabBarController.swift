@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TabBarController: UITabBarController {
+final class TabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +21,7 @@ class TabBarController: UITabBarController {
         let neighborhoodLifeVC = NeighborhoodLifeViewController()
         let nearByVC = NearByViewController()
         let chattingVC = ChattingViewController()
-        let settingsVC = SettingsViewController()
+        let settingsVC = ProfileViewController()
         
         homeVC.navigationItem.largeTitleDisplayMode = .automatic
         neighborhoodLifeVC.navigationItem.largeTitleDisplayMode = .automatic

@@ -12,6 +12,7 @@ class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
+        view.tintColor = .white
         setUpTabs()
     }
 
@@ -34,13 +35,12 @@ class TabBarController: UITabBarController {
         let nav4 = UINavigationController(rootViewController: chattingVC)
         let nav5 = UINavigationController(rootViewController: settingsVC)
         
-        nav1.tabBarItem = UITabBarItem(title: "홈", image: UIImage(systemName: "house"), tag: 1)
-        nav2.tabBarItem = UITabBarItem(title: "동네생활", image: UIImage(systemName: "scroll"), tag: 2)
-        nav3.tabBarItem = UITabBarItem(title: "내 근처", image: UIImage(systemName: "mappin.and.ellipse"), tag: 3)
-        nav4.tabBarItem = UITabBarItem(title: "채팅", image: UIImage(systemName: "bubble.left.and.bubble.right"), tag: 4)
-        nav5.tabBarItem = UITabBarItem(title: "나의 당근", image: UIImage(systemName: "person.fill"), tag: 5)
+        nav1.tabBarItem = UITabBarItem(title: "홈", image: UIImage(systemName: "house"), selectedImage: UIImage(systemName: "house.fill"))
+        nav2.tabBarItem = UITabBarItem(title: "동네생활", image: UIImage(systemName: "scroll"), selectedImage: UIImage(systemName: "scroll.fill"))
+        nav3.tabBarItem = UITabBarItem(title: "내 근처", image: UIImage(systemName: "mappin.and.ellipse.circle"), selectedImage: UIImage(systemName: "mappin.and.ellipse.circle.fill"))
+        nav4.tabBarItem = UITabBarItem(title: "채팅", image: UIImage(systemName: "bubble.left.and.bubble.right"), selectedImage: UIImage(systemName: "bubble.left.and.bubble.right.fill"))
+        nav5.tabBarItem = UITabBarItem(title: "나의 당근", image: UIImage(systemName: "person"), selectedImage: UIImage(systemName: "person.fill"))
         
-        nav1.tabBarItem.badgeColor = .white
         
         for nav in [nav1, nav2, nav3, nav4, nav5] {
             nav.navigationBar.prefersLargeTitles = true

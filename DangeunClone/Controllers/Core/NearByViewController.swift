@@ -11,7 +11,7 @@ final class NearByViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "내 근처"
+        view.backgroundColor = .systemBackground
         addRightBarButtons()
     }
     

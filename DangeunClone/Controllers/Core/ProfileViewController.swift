@@ -11,7 +11,7 @@ final class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "나의 당근"
+        view.backgroundColor = .systemBackground
         addSettingsButton()
     }
     

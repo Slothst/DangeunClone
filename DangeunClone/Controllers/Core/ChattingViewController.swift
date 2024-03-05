@@ -11,8 +11,13 @@ final class ChattingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "채팅"
+        view.backgroundColor = .systemBackground
+        setUpTitle()
         addRightBarButtons()
+    }
+    
+    private func setUpTitle() {
+        title = "채팅"
     }
     
     private func addRightBarButtons() {

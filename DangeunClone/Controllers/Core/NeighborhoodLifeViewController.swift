@@ -11,7 +11,7 @@ final class NeighborhoodLifeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "동네생활"
+        view.backgroundColor = .systemBackground
         addRightBarButtons()
     }
     

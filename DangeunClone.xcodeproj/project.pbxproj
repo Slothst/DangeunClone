@@ -17,6 +17,8 @@
 		252B53382B95E57E005C6473 /* NearByViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252B53372B95E57E005C6473 /* NearByViewController.swift */; };
 		252B533A2B95E597005C6473 /* ChattingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252B53392B95E597005C6473 /* ChattingViewController.swift */; };
 		252B533C2B95E5AC005C6473 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252B533B2B95E5AC005C6473 /* ProfileViewController.swift */; };
+		252B53452B96DB8D005C6473 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252B53442B96DB8D005C6473 /* HomeView.swift */; };
+		B2FB2B5C974B133884D4D0E3 /* Pods_DangeunClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E1DA4D4660135A6EB16AC3F /* Pods_DangeunClone.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,10 @@
 		252B53372B95E57E005C6473 /* NearByViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearByViewController.swift; sourceTree = "<group>"; };
 		252B53392B95E597005C6473 /* ChattingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingViewController.swift; sourceTree = "<group>"; };
 		252B533B2B95E5AC005C6473 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		252B53442B96DB8D005C6473 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		4E1DA4D4660135A6EB16AC3F /* Pods_DangeunClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DangeunClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		629BEAAEE894EFD6245F2DF6 /* Pods-DangeunClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DangeunClone.release.xcconfig"; path = "Target Support Files/Pods-DangeunClone/Pods-DangeunClone.release.xcconfig"; sourceTree = "<group>"; };
+		AA376A37DA14DD91E65DAB45 /* Pods-DangeunClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DangeunClone.debug.xcconfig"; path = "Target Support Files/Pods-DangeunClone/Pods-DangeunClone.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,17 +45,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2FB2B5C974B133884D4D0E3 /* Pods_DangeunClone.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09BE0D623EE68703B66ADE34 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AA376A37DA14DD91E65DAB45 /* Pods-DangeunClone.debug.xcconfig */,
+				629BEAAEE894EFD6245F2DF6 /* Pods-DangeunClone.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		21C440EBEA55816E4E4CB4FF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4E1DA4D4660135A6EB16AC3F /* Pods_DangeunClone.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		252B530D2B95A332005C6473 = {
 			isa = PBXGroup;
 			children = (
 				252B53182B95A332005C6473 /* DangeunClone */,
 				252B53172B95A332005C6473 /* Products */,
+				09BE0D623EE68703B66ADE34 /* Pods */,
+				21C440EBEA55816E4E4CB4FF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -93,6 +119,7 @@
 		252B532F2B95A51C005C6473 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				252B53442B96DB8D005C6473 /* HomeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -142,9 +169,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 252B532A2B95A334005C6473 /* Build configuration list for PBXNativeTarget "DangeunClone" */;
 			buildPhases = (
+				13D672ED69D61770F92CD983 /* [CP] Check Pods Manifest.lock */,
 				252B53122B95A332005C6473 /* Sources */,
 				252B53132B95A332005C6473 /* Frameworks */,
 				252B53142B95A332005C6473 /* Resources */,
+				9EEC646744AD965ABDB39B1C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -200,11 +229,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		13D672ED69D61770F92CD983 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DangeunClone-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9EEC646744AD965ABDB39B1C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DangeunClone/Pods-DangeunClone-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DangeunClone/Pods-DangeunClone-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DangeunClone/Pods-DangeunClone-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		252B53122B95A332005C6473 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				252B53452B96DB8D005C6473 /* HomeView.swift in Sources */,
 				252B531E2B95A332005C6473 /* TabBarController.swift in Sources */,
 				252B533A2B95E597005C6473 /* ChattingViewController.swift in Sources */,
 				252B531A2B95A332005C6473 /* AppDelegate.swift in Sources */,
@@ -351,12 +423,14 @@
 		};
 		252B532B2B95A334005C6473 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA376A37DA14DD91E65DAB45 /* Pods-DangeunClone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 94L65Y4872;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DangeunClone/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -379,12 +453,14 @@
 		};
 		252B532C2B95A334005C6473 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 629BEAAEE894EFD6245F2DF6 /* Pods-DangeunClone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 94L65Y4872;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DangeunClone/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

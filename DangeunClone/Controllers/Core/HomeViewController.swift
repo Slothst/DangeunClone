@@ -11,7 +11,7 @@ final class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "홈"
+        view.backgroundColor = .systemBackground
         addRightBarButtons()
     }
     

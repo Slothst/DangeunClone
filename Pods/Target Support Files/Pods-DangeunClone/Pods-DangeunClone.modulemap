@@ -1,0 +1,6 @@
+framework module Pods_DangeunClone {
+  umbrella header "Pods-DangeunClone-umbrella.h"
+
+  export *
+  module * { export * }
+}

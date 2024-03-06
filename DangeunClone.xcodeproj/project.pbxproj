@@ -17,7 +17,12 @@
 		252B53382B95E57E005C6473 /* NearByViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252B53372B95E57E005C6473 /* NearByViewController.swift */; };
 		252B533A2B95E597005C6473 /* ChattingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252B53392B95E597005C6473 /* ChattingViewController.swift */; };
 		252B533C2B95E5AC005C6473 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252B533B2B95E5AC005C6473 /* ProfileViewController.swift */; };
-		252B53452B96DB8D005C6473 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252B53442B96DB8D005C6473 /* HomeView.swift */; };
+		252B53452B96DB8D005C6473 /* HomeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252B53442B96DB8D005C6473 /* HomeListView.swift */; };
+		252B53472B9856C6005C6473 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252B53462B9856C6005C6473 /* HomeCollectionViewCell.swift */; };
+		252B53492B9858BD005C6473 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252B53482B9858BD005C6473 /* Extension.swift */; };
+		252B534B2B985925005C6473 /* HomeListViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252B534A2B985925005C6473 /* HomeListViewViewModel.swift */; };
+		252B534D2B985958005C6473 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252B534C2B985958005C6473 /* Post.swift */; };
+		252B534F2B985ADE005C6473 /* HomeCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252B534E2B985ADE005C6473 /* HomeCollectionViewCellViewModel.swift */; };
 		B2FB2B5C974B133884D4D0E3 /* Pods_DangeunClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E1DA4D4660135A6EB16AC3F /* Pods_DangeunClone.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,7 +39,12 @@
 		252B53372B95E57E005C6473 /* NearByViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearByViewController.swift; sourceTree = "<group>"; };
 		252B53392B95E597005C6473 /* ChattingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingViewController.swift; sourceTree = "<group>"; };
 		252B533B2B95E5AC005C6473 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		252B53442B96DB8D005C6473 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		252B53442B96DB8D005C6473 /* HomeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListView.swift; sourceTree = "<group>"; };
+		252B53462B9856C6005C6473 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		252B53482B9858BD005C6473 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		252B534A2B985925005C6473 /* HomeListViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListViewViewModel.swift; sourceTree = "<group>"; };
+		252B534C2B985958005C6473 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		252B534E2B985ADE005C6473 /* HomeCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
 		4E1DA4D4660135A6EB16AC3F /* Pods_DangeunClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DangeunClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		629BEAAEE894EFD6245F2DF6 /* Pods-DangeunClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DangeunClone.release.xcconfig"; path = "Target Support Files/Pods-DangeunClone/Pods-DangeunClone.release.xcconfig"; sourceTree = "<group>"; };
 		AA376A37DA14DD91E65DAB45 /* Pods-DangeunClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DangeunClone.debug.xcconfig"; path = "Target Support Files/Pods-DangeunClone/Pods-DangeunClone.debug.xcconfig"; sourceTree = "<group>"; };
@@ -112,6 +122,7 @@
 		252B532E2B95A509005C6473 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				252B534C2B985958005C6473 /* Post.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -119,7 +130,8 @@
 		252B532F2B95A51C005C6473 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				252B53442B96DB8D005C6473 /* HomeView.swift */,
+				252B53442B96DB8D005C6473 /* HomeListView.swift */,
+				252B53462B9856C6005C6473 /* HomeCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -127,6 +139,8 @@
 		252B53302B95A51F005C6473 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				252B534A2B985925005C6473 /* HomeListViewViewModel.swift */,
+				252B534E2B985ADE005C6473 /* HomeCollectionViewCellViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -145,6 +159,7 @@
 				252B531B2B95A332005C6473 /* SceneDelegate.swift */,
 				252B53222B95A334005C6473 /* Assets.xcassets */,
 				252B53242B95A334005C6473 /* LaunchScreen.storyboard */,
+				252B53482B9858BD005C6473 /* Extension.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -276,14 +291,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				252B53452B96DB8D005C6473 /* HomeView.swift in Sources */,
+				252B534F2B985ADE005C6473 /* HomeCollectionViewCellViewModel.swift in Sources */,
+				252B53452B96DB8D005C6473 /* HomeListView.swift in Sources */,
 				252B531E2B95A332005C6473 /* TabBarController.swift in Sources */,
 				252B533A2B95E597005C6473 /* ChattingViewController.swift in Sources */,
 				252B531A2B95A332005C6473 /* AppDelegate.swift in Sources */,
+				252B534D2B985958005C6473 /* Post.swift in Sources */,
+				252B53492B9858BD005C6473 /* Extension.swift in Sources */,
 				252B53362B95E56F005C6473 /* NeighborhoodLifeViewController.swift in Sources */,
+				252B53472B9856C6005C6473 /* HomeCollectionViewCell.swift in Sources */,
 				252B531C2B95A332005C6473 /* SceneDelegate.swift in Sources */,
 				252B53342B95E529005C6473 /* HomeViewController.swift in Sources */,
 				252B53382B95E57E005C6473 /* NearByViewController.swift in Sources */,
+				252B534B2B985925005C6473 /* HomeListViewViewModel.swift in Sources */,
 				252B533C2B95E5AC005C6473 /* ProfileViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

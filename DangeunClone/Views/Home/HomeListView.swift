@@ -6,10 +6,17 @@
 //
 
 import UIKit
-import PinLayout
-import FlexLayout
 
-class HomeListView: UIView {
+protocol HomeListViewDelegate: AnyObject {
+    func homeListView(
+        _ homeListView: HomeListView,
+        didSelectPost post: Post
+    )
+}
+
+final class HomeListView: UIView {
+    
+    public weak var delegate: HomeListViewDelegate?
 
     private let viewModel = HomeListViewViewModel()
     
@@ -33,6 +40,7 @@ class HomeListView: UIView {
         translatesAutoresizingMaskIntoConstraints = false
         addSubview(collectionView)
         addConstraints()
+        viewModel.delegate = self
         viewModel.fetchPosts()
         setUpCollectionView()
     }
@@ -53,5 +61,11 @@ class HomeListView: UIView {
     private func setUpCollectionView() {
         collectionView.delegate = viewModel
         collectionView.dataSource = viewModel
+    }
+}
+
+extension HomeListView: HomeListViewViewModelDelegate {
+    func didSelectPost(_ post: Post) {
+        delegate?.homeListView(self, didSelectPost: post)
     }
 }

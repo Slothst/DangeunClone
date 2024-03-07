@@ -7,7 +7,14 @@
 
 import UIKit
 
+protocol HomeListViewViewModelDelegate: AnyObject {
+    func didSelectPost(_ post: Post)
+}
+
 final class HomeListViewViewModel: NSObject {
+    
+    public weak var delegate: HomeListViewViewModelDelegate?
+    
     private var posts: [Post] = [] {
         didSet {
             for post in posts {
@@ -50,7 +57,6 @@ final class HomeListViewViewModel: NSObject {
 
 extension HomeListViewViewModel: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print(cellViewModels.count)
         return cellViewModels.count
     }
     
@@ -69,5 +75,11 @@ extension HomeListViewViewModel: UICollectionViewDelegate, UICollectionViewDataS
         let bounds = collectionView.bounds
         let width = bounds.width
         return CGSize(width: width, height: width / 3.3)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: true)
+        let post = posts[indexPath.row]
+        delegate?.didSelectPost(post)
     }
 }

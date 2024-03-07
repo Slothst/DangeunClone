@@ -6,10 +6,8 @@
 //
 
 import UIKit
-import PinLayout
-import FlexLayout
 
-final class HomeViewController: UIViewController {
+final class HomeViewController: UIViewController, HomeListViewDelegate {
     
     private let homeListView = HomeListView()
     
@@ -45,6 +43,7 @@ final class HomeViewController: UIViewController {
     }
     
     private func setUpView() {
+        homeListView.delegate = self
         view.addSubview(homeListView)
         NSLayoutConstraint.activate([
             homeListView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
@@ -52,5 +51,14 @@ final class HomeViewController: UIViewController {
             homeListView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor),
             homeListView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
+    }
+    
+    // MARK: - HomeListViewDelegate
+    
+    func homeListView(_ homeListView: HomeListView, didSelectPost post: Post) {
+        let viewModel = HomeDetailViewViewModel(post: post)
+        let detailVc = HomeDetailViewController(viewModel: viewModel)
+        detailVc.navigationItem.largeTitleDisplayMode = .never
+        navigationController?.pushViewController(detailVc, animated: true)
     }
 }
